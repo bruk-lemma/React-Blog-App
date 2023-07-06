@@ -23,21 +23,20 @@ function App() {
 
   return (
     //2) Provide  a  value to child component
-    <PostProvider>
-      <section>
-        <button
-          onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
-          className="btn-fake-dark-mode"
-        >
-          {isFakeDark ? "☀️" : "🌙"}
-        </button>
-
+    <section>
+      <button
+        onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
+        className="btn-fake-dark-mode"
+      >
+        {isFakeDark ? "☀️" : "🌙"}
+      </button>
+      <PostProvider>
         <Header />
         <Main />
         <Archive />
         <Footer />
-      </section>
-    </PostProvider>
+      </PostProvider>
+    </section>
   );
 }
 
